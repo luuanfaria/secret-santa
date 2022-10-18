@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Configuration Page Should render without errors 1`] = `
+<div>
+  <div
+    class="bg-theme-gray border-2 border-solid border-black box-border rounded-t-card p-80 flex flex-1 -mt-negative justify-center"
+  >
+    <section>
+      <h2>
+        Let's start
+      </h2>
+      <form>
+        <div
+          class="mb-8"
+        >
+          <input
+            class="rounded-l-input h-82 w-8/12 box-border pl-2 text-xl border-2 border-solid border-black focus:outline-none shadow-input large:block large:w-full large:rounded-input large:shadow-input large:mb-18 placeholder:pl-2"
+            placeholder="Insert names of the new members"
+            type="text"
+            value=""
+          />
+          <button
+            class="rounded-r-input h-82 w-1/3 box-border border-2 border-solid border-black text-xl text-black shadow-button cursor-pointer bg-gray-dark pt-px hover:opacity-80 disabled:opacity-60 disabled:cursor-not-allowed large:block large:mt-16 large:my-0 large:mx-auto large:w-220 large:rounded-input"
+            disabled=""
+            type="submit"
+          >
+            Add
+          </button>
+        </div>
+        
+      </form>
+      <ul />
+      <footer
+        class="flex items-center justify-between large:flex-col"
+      >
+        <button
+          class="w-350 h-20 text-xl shadow-button rounded-input bg-orange text-white cursor-pointer disabled:opacity-60 cursor-not-allowed hover:bg-purple large:w-220 large:my-32 large:mx-0"
+          disabled=""
+        >
+          Start
+        </button>
+        <img
+          alt="Shopping bags"
+          class="my-0"
+          src="/images/sacolas.png"
+        />
+      </footer>
+    </section>
+  </div>
+</div>
+`;
