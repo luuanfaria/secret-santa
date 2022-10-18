@@ -17,6 +17,9 @@ export function Raffle() {
 
     if (result.has(currentMember)) {
       setSecretFriend(result.get(currentMember)!)
+      setTimeout(() => {
+        setSecretFriend('')
+      }, 5000)
     }
   }
 

@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import React from 'react'
+import { act } from 'react-dom/test-utils'
 import { RecoilRoot } from 'recoil'
 import { useMembersList } from '../state/hooks/useMembersList'
 import { useRaffleResult } from '../state/hooks/useRaffleResult'
@@ -65,5 +66,30 @@ describe('Raffle page', () => {
 
     const secretFriend = screen.getByRole('alert')
     expect(secretFriend).toBeInTheDocument()
+  })
+
+  test('The revealed name should disappear after 5 seconds', () => {
+    jest.useFakeTimers()
+
+    render(
+      <RecoilRoot>
+        <Raffle />
+      </RecoilRoot>
+    )
+
+    const select = screen.getByPlaceholderText('Select your name')
+
+    fireEvent.change(select, { target: { value: members[1] } })
+
+    const button = screen.getByRole('button')
+    fireEvent.click(button)
+
+    act(() => {
+      jest.runAllTimers();
+    })
+
+    const alert = screen.queryByRole('alert')
+
+    expect(alert).not.toBeInTheDocument()
   })
 })
